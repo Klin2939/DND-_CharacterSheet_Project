@@ -1,0 +1,14 @@
+#AbilityScores {
+    font-family: "Times New Roman", Times, serif;
+    display: inline;
+    text-align: left;
+}
+
+table {
+    margin-top: 50px;
+    text-align: left;
+}
+th, td {
+    text-align: center;
+    padding-left: 10px;
+}
