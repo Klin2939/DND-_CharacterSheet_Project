@@ -11,15 +11,43 @@ class Character {
         this.Char = Char;
     }
 
-}
+    setName(value) {
+        this.CACName = value;
+      }
+      setClass(value) {
+        this.Class = value;
+      }
+      setLevel(value) {
+        this.Level = value;
+      }
+    
+      setAbiScore(strScore, dexScore, conScore, intScore, wisScore, charScore) {
+        this.Str = strScore;
+        this.Dex = dexScore;
+        this.Con = conScore;
+        this.Int = intScore;
+        this.Wis = wisScore;
+        this.Char = charScore;
+      }
+    }
 
+const newCac = new Character()
 
 
 document.getElementById("CAC Name").addEventListener('onchange', function(){
     let cacName = document.getElementById('CAC Name').value
+    console.log(cacName)
+    newCac.setName(cacName);
+})
+document.getElementById("CAC Name").addEventListener('onchange', function(){
+    let cacClass = document.getElementById("CAC Class").value
+    console.log(cacClass)
+    newCac.setClass(cacClass);
 })
 document.getElementById("CAC Name").addEventListener('onchange', function(){
     let cacLevel = document.getElementById('level').value
+    console.log(cacLevel)
+    newCac.setLevel(cacLevel);
 })
 document.getElementById("submit").addEventListener('click', function(){
     let strScore = document.getElementById('strength').value;
@@ -35,9 +63,8 @@ document.getElementById("submit").addEventListener('click', function(){
     let charScore = document.getElementById('charisma').value;
     console.log(charScore)
 
-    //newCac = Character(cacName, cacLevel, strScore, dexScore, conScore, intScore, wisScore, charScore)
-
-    //console.log(JSON.stringify(newCac));
+    newCac.setAbiScore(strScore, dexScore, conScore, intScore, wisScore, charScore);
+    console.log(JSON.stringify(newCac));
 
     sMod = modCalc(strScore)
     console.log(sMod)
