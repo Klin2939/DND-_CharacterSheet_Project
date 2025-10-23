@@ -1,5 +1,5 @@
 class Character {
-    constructor(CACName = " ", Class = " ", Level = 0, Str = 0, Dex = 0, Con = 0, Int = 0, Wis = 0, Char = 0){
+    constructor(CACName = "NameNA", Class = "NA", Level = 1, Str = 0, Dex = 0, Con = 0, Int = 0, Wis = 0, Char = 0){
         this.CACName = CACName;
         this.Class = Class;
         this.Level = Level;
@@ -34,17 +34,17 @@ class Character {
 const newCac = new Character()
 
 
-document.getElementById("CAC Name").addEventListener('onchange', function(){
+document.getElementById("submit").addEventListener('click', function(){
     let cacName = document.getElementById('CAC Name').value
     console.log(cacName)
     newCac.setName(cacName);
 })
-document.getElementById("CAC Name").addEventListener('onchange', function(){
+document.getElementById("submit").addEventListener('click', function(){
     let cacClass = document.getElementById("CAC Class").value
     console.log(cacClass)
     newCac.setClass(cacClass);
 })
-document.getElementById("CAC Name").addEventListener('onchange', function(){
+document.getElementById("submit").addEventListener('click', function(){
     let cacLevel = document.getElementById('level').value
     console.log(cacLevel)
     newCac.setLevel(cacLevel);
@@ -66,24 +66,48 @@ document.getElementById("submit").addEventListener('click', function(){
     newCac.setAbiScore(strScore, dexScore, conScore, intScore, wisScore, charScore);
     console.log(JSON.stringify(newCac));
 
-    sMod = modCalc(strScore)
+    let sMod = modCalc(strScore)
     console.log(sMod)
     document.getElementById("str").innerHTML = sMod;
-    dMod = modCalc(dexScore)
+    const strID = document.querySelectorAll(".strSkill");
+    strID.forEach(element => {
+        element.innerHTML = sMod;
+      });
+    let dMod = modCalc(dexScore)
     console.log(dMod)
     document.getElementById("dex").innerHTML = dMod;
-    cMod = modCalc(conScore)
+    const dexID = document.querySelectorAll(".dexSkill");
+    dexID.forEach(element => {
+        element.innerHTML = dMod;
+      });
+    let cMod = modCalc(conScore)
     console.log(cMod)
     document.getElementById("con").innerHTML = cMod;
-    iMod = modCalc(intScore)
+    const conID = document.querySelectorAll(".conSkill");
+    conID.forEach(element => {
+        element.innerHTML = cMod;
+      });
+    let iMod = modCalc(intScore)
     console.log(iMod)
     document.getElementById("int").innerHTML = iMod;
-    wMod = modCalc(wisScore)
+    const intID = document.querySelectorAll(".intSkill");
+    intID.forEach(element => {
+        element.innerHTML = iMod;
+      });
+    let wMod = modCalc(wisScore)
     console.log(wMod)
     document.getElementById("wis").innerHTML = wMod;
-    chMod = modCalc(charScore)
+    const wisID = document.querySelectorAll(".wisSkill");
+    wisID.forEach(element => {
+        element.innerHTML = wMod;
+      });
+    let chMod = modCalc(charScore)
     console.log(chMod)
     document.getElementById("char").innerHTML = chMod;
+    const charID = document.querySelectorAll(".charSkill");
+    charID.forEach(element => {
+        element.innerHTML = chMod;
+      });
 
 })
 
