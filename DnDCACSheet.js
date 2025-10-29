@@ -113,7 +113,7 @@ document.getElementById("submit").addEventListener('click', function(){
 
 function modCalc(score) {
     mod = (score - 10) / 2
-    if (mod == 0){
+    if (mod <= 0){
       return `${mod}`
     }
     if (isInt(mod) == true){
