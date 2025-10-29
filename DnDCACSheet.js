@@ -113,6 +113,9 @@ document.getElementById("submit").addEventListener('click', function(){
 
 function modCalc(score) {
     mod = (score - 10) / 2
+    if (mod == 0){
+      return `${mod}`
+    }
     if (isInt(mod) == true){
         return `+${mod}`
     } else {
@@ -122,4 +125,20 @@ function modCalc(score) {
 }
 function isInt(n) {
     return n % 1 === 0;
+ }
+ function updateLifeDisplay() {
+  document.getElementById('hitPoints').textContent = `${currentHP}/${maxHP}`;
+}
+ function increaseLife() {
+  if (hitPoint < totalHP){
+    hitPoint++;
+    updateLifeDisplay() 
+  }
+ }
+
+ function decreaseLife() {
+  if (hitPoint > 0){
+    hitPoint--;
+    updateLifeDisplay() 
+  }
  }

@@ -1,14 +1,43 @@
-#AbilityScores {
+.AbilityScores {
     font-family: "Times New Roman", Times, serif;
     display: inline;
     text-align: left;
 }
 
 table {
-    margin-top: 50px;
+    margin-top: -10px;
     text-align: left;
 }
 th, td {
     text-align: center;
     padding-left: 10px;
 }
+.hit-point-box {
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 40px;
+    display: inline-block; 
+  }
+  
+  .Hit_Points {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .button_column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    justify-content: center;
+  }
+  
+  .hit-point-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4em;
+  }

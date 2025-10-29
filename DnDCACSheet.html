@@ -47,43 +47,59 @@
     <option>Wizard</option>
 </select>
 </h3>
-  <div id="AbilityScores"> 
+  <div class="AbilityScores"> 
     <label for="strength">Str:</label>
     <span class="modifier" id = "str">0</span> 
     <input type = "number" id = "strength">
   </div>
 
-  <div id="AbilityScores"> 
+  <div class="AbilityScores"> 
     <label for="dexterity">Dex:</label>
     <span class="modifier" id = "dex">0</span> 
     <input type = "number" id = "dexterity">
     </div>
 
-  <div id="AbilityScores">
+  <div class="AbilityScores">
     <label for="consitusion">Con:</label>
     <span class="modifier" id = "con">0</span>  
     <input type = "number" id = "consitusion">
   </div>
 
-  <div id="AbilityScores"> 
+  <div class="AbilityScores"> 
     <label for="intelegence">Int:</label>
     <span class="modifier" id = "int">0</span> 
     <input type = "number" id = "intelegence">
   </div>
 
-  <div id="AbilityScores"> 
+  <div class="AbilityScores"> 
     <label for="wisdom">Wis:</label>
     <span class="modifier" id = "wis">0</span> 
     <input type = "number" id = "wisdom">
   </div>
 
-  <div id="AbilityScores"> 
+  <div class="AbilityScores"> 
     <label for = "charisma">Char:</label>
     <span class="modifier" id = "char">0</span> 
     <input type = "number" id = "charisma"> 
   </div>
 
     <input type ="button" value="Submit" id = "submit">
+    <div class="hit-point-box">
+      <div class="Hit_Points">
+        <div class="button_column">
+          <button id="Life" onclick="increaseLife()">+</button>
+          <button id="Damage" onclick="decreaseLife()">-</button>
+        </div>
+        <div class="hit-point-main">
+          <h2>
+            Hit Points <br>
+            <span id="hitPoints">0/0</span>
+          </h2>
+          <input type="number" id="quantity">
+        </div>
+      </div>
+    </div>
+    
 
   <table>
     <tr>
