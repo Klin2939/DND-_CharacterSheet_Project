@@ -129,13 +129,14 @@ function isInt(n) {
  function updateLifeDisplay() {
   document.getElementById('hitPoints').textContent = `${currentHP}/${maxHP}`;
 }
+
  function increaseLife() {
   if (hitPoint < totalHP){
     hitPoint++;
     updateLifeDisplay() 
   }
  }
-
+ 
  function decreaseLife() {
   if (hitPoint > 0){
     hitPoint--;
