@@ -143,3 +143,7 @@ function isInt(n) {
     updateLifeDisplay() 
   }
  }
+
+  function updateACDisplay() {
+  document.getElementById('armorClass').textContent = `${armorClass}`;
+}

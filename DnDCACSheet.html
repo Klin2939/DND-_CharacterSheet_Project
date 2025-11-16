@@ -84,22 +84,6 @@
   </div>
 
     <input type ="button" value="Submit" id = "submit">
-    <div class="hit-point-box">
-      <div class="Hit_Points">
-        <div class="button_column">
-          <button id="Life" onclick="increaseLife()">+</button>
-          <button id="Damage" onclick="decreaseLife()">-</button>
-        </div>
-        <div class="hit-point-main">
-          <h2>
-            Hit Points <br>
-            <span id="hitPoints">0/0</span>
-          </h2>
-          <input type="number" id="quantity">
-        </div>
-      </div>
-    </div>
-    
 
   <table>
     <tr>
@@ -196,6 +180,29 @@
   <td class = "wisSkill">0</td>
 </tr>
   </table>
+
+      <div class="hit-point-box">
+      <div class="Hit_Points">
+        <div class="button_column">
+          <button id="Life" onclick="increaseLife()">+</button>
+          <button id="Damage" onclick="decreaseLife()">-</button>
+        </div>
+        <div class="hit-point-main">
+          <h2>
+            Hit Points <br>
+            <span id="hitPoints">0/0</span>
+          </h2>
+          <input type="number" id="quantity">
+        </div>
+      </div>
+    </div>
+    
+    <div class="armor-class-main">
+      <h2>
+        AC <br>
+        <span id="armorClass">10</span>
+      </h2>
+
 
   <script src="DnDCACSheet.js"></script>
 </body>
