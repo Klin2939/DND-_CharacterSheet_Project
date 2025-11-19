@@ -5,10 +5,10 @@
 
 <h3>Things completed so far</h3>
 
-<li>
-  <ol>Have general information boxes for CAC name, level and class</ol>
-  <ol>Created ability score inputs that calculate the modifiers</ol>
-  <ol>Created a skill table that gets updated with the ability scores</ol>
-  <ol>Have a heath box that will display health total</ol>
-  <ol>Have a armor class box that will display AC</ol>
-</li>
+<ol>
+  <li>Have general information boxes for CAC name, level and class</li>
+  <li>Created ability score inputs that calculate the modifiers</li>
+  <li>Created a skill table that gets updated with the ability scores</li>
+  <li>Have a heath box that will display health total</li>
+  <li>Have a armor class box that will display AC</li>
+</ol>
