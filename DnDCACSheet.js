@@ -144,6 +144,20 @@ function isInt(n) {
   }
  }
 
-  function updateACDisplay() {
+function updateACDisplay() {
   document.getElementById('armorClass').textContent = `${armorClass}`;
 }
+
+function getmain() {
+  let fgMain = fetchJSON('http://127.0.0.1:5000')
+  console.log(fgMain)
+}
+
+function fetchJSON(url) {
+    return fetch(url)
+        .then(response => response.json())
+        .catch((error) => {
+            console.log(error);
+        });
+}
+getmain()

@@ -1,3 +1,4 @@
+# python3 -m flask --app main run
 from flask import Flask
 
 app = Flask(__name__)
